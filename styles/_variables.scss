@@ -1,0 +1,27 @@
+// Color's 
+
+$dark-blue-main: hsl(233, 47%, 7%);
+$desat-blue-card: hsl(244, 38%, 16%);
+$soft-violet-accent: hsl(277, 64%, 61%);
+
+// Neutral
+
+$white-main: hsl(0, 0%, 100%);
+$transp-white-main: hsla(0, 0%, 100%, 0.75);
+$transp-white: hsla(0, 0%, 100%, 0.6);
+
+// Font
+
+$font-size: 15px;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+// Mixin's
+
+@mixin flexBox($a: center, $j: center, $fd: row, $g: 0) {
+    display: flex;
+    flex-direction: $fd;
+    align-items: $a;
+    justify-content: $j;
+    gap: $g;
+}

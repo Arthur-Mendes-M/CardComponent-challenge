@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import 'variables';
+
+:root {
+    font-size: $font-size;
+}
+
+body {
+    @include flexBox();
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    background-color: $dark-blue-main;
+    color: $white-main;
+    padding: 2.5rem 1rem;
+    position: relative;
+}
+
+#card {
+    @include flexBox($fd: column, $g: 1.5rem);
+    width: 310px;
+    background-color: $desat-blue-card;
+    border-radius: 10px;
+    text-align: center;
+
+    #img--card {
+        width: 100%;
+        height: 230px;
+        position: relative;
+
+        picture {
+            height: 100%;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            background: rgba(117, 10, 185, 0.55);
+            border-radius: 10px 10px 0 0;
+        }
+    }
+
+    #descrips--card {
+        @include flexBox($fd: column, $g: 2rem);
+        padding: 1.5rem;
+
+        .title--card {
+            @include flexBox($fd: column, $g: 1rem);        
+            h1 {
+                color: $white-main;
+                font-family: 'Inter', sans-serif;
+                font-weight: 700;
+                font-size: 1.8rem;
+            }
+    
+            p {
+                color: $transp-white-main;
+                font-family: 'Inter', sans-serif;
+                font-weight: 400;
+                line-height: 1.5rem;
+            }
+    
+            mark {
+                background: none;
+                color: $soft-violet-accent;
+            }
+        }
+
+        .stats--card {
+            @include flexBox($fd: column, $g: 1.5rem);
+            width: 100%;
+            padding: .5rem 0 .5rem 0;
+    
+            .stat {
+                @include flexBox($fd: column, $g: .5rem);
+
+                h2 {
+                    font-family: 'Inter', sans-serif;
+                }
+
+                p {
+                    color: $transp-white-main;
+                    font-family: 'Lexend Deca', sans-serif;
+                    font-size: .8rem;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1080px) {
+    #card {
+        flex-direction: row-reverse;
+        width: 80%;
+        min-height: 60%;
+        height: 450px;
+        text-align: left;
+        gap: 0;
+
+        #img--card {
+            height: 100%;
+            width: 50%;
+
+            img, &::before{
+                border-radius: 0 10px 10px 0;
+            }
+        }
+
+        #descrips--card {
+            padding: 3.5rem 5.5rem 3rem 5rem;
+            height: 100%;
+            width: 50%;
+            gap: 5.5rem;
+            align-items: flex-start;
+
+            .title--card {
+                gap: 1.5rem;
+                align-items: flex-start;
+                h1 {
+                    font-size: 2.5rem;
+                }
+
+                p {
+                    width: 90%;
+                }
+            }
+
+            .stats--card {
+                flex-direction: row;
+                justify-content: space-between;
+                width: 90%;
+
+                .stat {
+                    align-items: flex-start;
+                }
+            }
+        }        
+    }
+}
+
+.attribution {
+    font-size: 1ren; 
+    text-align: center;
+
+    position: absolute;
+    bottom: .2rem;
+    left: 1rem;
+    a {
+        color: $soft-violet-accent;
+        cursor: pointer;
+        text-decoration: none;
+    }
+}

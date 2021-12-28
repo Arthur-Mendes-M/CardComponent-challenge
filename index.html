@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles/style.css">
+  <title>Frontend Mentor | Stats preview card component</title>
+  <meta name="description" content="Challenge by frontendmentor, coded by Arthur Mendes with HTML5, CSS and SASS">
+</head>
+<body>
+
+  <main id="card">
+
+    <section id="img--card">
+      <picture>
+        <source srcset="images/image-header-mobile.jpg" media="(max-width: 768px)">
+        <source srcset="images/image-header-desktop.jpg" media="(min-width: 769px)">
+        <img src="images/image-header-desktop.jpg" alt="Image">
+      </picture>
+    </section>
+    
+    <section id="descrips--card">
+      <div class="title--card">
+
+        <h1>Get <mark>insights</mark> that help your business grow.</h1>
+        <p>
+          Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency.
+        </p>
+  
+      </div>
+  
+      <div class="stats--card">
+  
+        <div class="stat"><h2>10k+</h2><p>COMPANIES</p></div>
+        <div class="stat"><h2>314</h2><p>TEMPLATES</p></div>
+        <div class="stat"><h2>12M+</h2><p>QUERIES</p></div>
+  
+      </div>
+    </section>
+    
+  </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/Arthur-Mendes-M" target="_blank" rel="noopener">Arthur Mendes</a>.
+  </div>
+</body>
+</html>
